@@ -1,3 +1,4 @@
+ç¬¬ä¸€é¢˜
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -18,7 +19,7 @@ int main ()
 
 
 
-
+ç¬¬äºŒé¢˜
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -38,7 +39,7 @@ int main (void)
 {
 
 	int n=0;
-	cout<<"ÊäÈëÊý×é³¤¶È";
+	cout<<"è¾“å…¥æ•°ç»„é•¿åº¦";
 	cin>>n;
 	Arraysum(n);
 }
@@ -46,7 +47,7 @@ int main (void)
 
 
 
-
+ç¬¬ä¸‰é¢˜
 #include<iostream>
 #include<fstream>
 using namespace std;
@@ -66,12 +67,12 @@ void Arraysum (int n,int e,int d)
 int main (void)
 {
 	double e,d;
-	cout<<"ÊäÈëÖ¸¶¨·¶Î§µÄ×îÐ¡Öµ";
+	cout<<"è¾“å…¥æŒ‡å®šèŒƒå›´çš„æœ€å°å€¼";
 	cin>>e;
-	cout<<"ÊäÈëÖ¸¶¨·¶Î§µÄ×î´óÖµ";
+	cout<<"è¾“å…¥æŒ‡å®šèŒƒå›´çš„æœ€å¤§å€¼";
 	cin>>d;
 	int n=0;
-	cout<<"ÊäÈëÊý×é³¤¶È";
+	cout<<"è¾“å…¥æ•°ç»„é•¿åº¦";
 	cin>>n;
 	
 	Arraysum(n,e,d);
