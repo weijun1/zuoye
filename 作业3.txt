@@ -1,0 +1,37 @@
+package sad;
+ 
+import java.util.Map;  
+import java.util.StringTokenizer;  
+import java.util.Map.Entry; 
+import java.util.ArrayList;  
+import java.util.HashMap;  
+import java.util.List; //所用到的库
+    
+public class wordcount{  
+public static void main(String arg[]){      
+  
+    String sentence="Word is case insensitive, i.e. “file”, “FILE” and “File” are considered the same word."; //英文句子存放的地方
+    Map<String,Integer> map=new HashMap<String,Integer>();  
+    String sentence2= sentence.toLowerCase();//大小写转换语句
+    StringTokenizer token=new StringTokenizer(sentence2); 
+    while(token.hasMoreTokens()){   //遍历改英文句子
+        
+        String word=token.nextToken(", :\"\".“”");  
+        if(map.containsKey(word)){      
+            int count=map.get(word);  
+            map.put(word, count+1);     
+        }  
+        else  
+            map.put(word, 1);          
+    }  
+    small(map);                        
+}  
+public static void small(Map<String,Integer> map){  //输出的函数
+    List<Map.Entry<String, Integer>> infoIds = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());     
+    for (int i = 0; i < infoIds.size(); i++) {   
+        Entry<String, Integer> id = infoIds.get(i);  
+        if(id.getKey().length()>3)
+    System.out.println(id.getKey()+":"+id.getValue());  
+        }  
+}  
+}  
