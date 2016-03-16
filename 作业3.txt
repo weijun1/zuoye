@@ -26,6 +26,14 @@ public static void main(String arg[]){
     }  
     small(map);                        
 }  
+public static boolean isNumeric(String str) {
+Pattern pattern = Pattern.compile("[0-9]*");
+Matcher isNum = pattern.matcher(str.charAt(0)+"");
+if (!isNum.matches()) {
+return false;
+}
+return true;
+}
 public static void small(Map<String,Integer> map){  //输出的函数
     List<Map.Entry<String, Integer>> infoIds = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());     
     for (int i = 0; i < infoIds.size(); i++) {   
