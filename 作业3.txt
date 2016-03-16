@@ -35,7 +35,12 @@ return false;
 return true;
 }
 public static void small(Map<String,Integer> map){  //输出的函数
-    List<Map.Entry<String, Integer>> infoIds = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());     
+    List<Map.Entry<String, Integer>> infoIds = new ArrayList<Map.Entry<String, Integer>>(map.entrySet());  
+    Collections.sort(infoids, new Comparator<Map.Entry<String, Integer>>() {     //排序
+        public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {     
+            return (o2.getValue() - o1.getValue());     
+        }     
+});
     for (int i = 0; i < infoIds.size(); i++) {   
         Entry<String, Integer> id = infoIds.get(i);  
         if(id.getKey().length()>3){
